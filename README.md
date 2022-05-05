@@ -1,7 +1,6 @@
 # The AI Jazz Composer
 
-An adapted Transformer-XL deep learning model that composes Jazz music  (lead sheets&mdash;_chord progression & melody_).
-Credit thanks to Kimi Young, check out his github @ https://github.com/kimiyoung/transformer-xl
+An adapted Transformer-XL and LSTM deep learning model that composes Jazz music.
 
 
 ## Usage Notes
@@ -12,7 +11,7 @@ Credit thanks to Kimi Young, check out his github @ https://github.com/kimiyoung
   ```shell
   pip3 install -r requirements.txt
   ```
-  
+
 ### Compose Some Songs Right Away
   * Inference (compose)
   ```shell
@@ -36,12 +35,12 @@ Credit thanks to Kimi Young, check out his github @ https://github.com/kimiyoung
   ```
   * ``ckpt_dir``:  directory to save checkpoints  
   * ``log_file``:             path to the log file  
-  
+
   Likewise, you may compose music with the model trained by yourself using ``inference.py`` (see above for instructions)
 
 ## Directory Structure
 ```
-├── data_preprocess.sh      (executes python scripts to build vocab and prepare data) 
+├── data_preprocess.sh      (executes python scripts to build vocab and prepare data)
 ├── inference.py            (generates Jazz music)
 ├── requirements.txt        (python dependencies)
 ├── train.py                (trains Transformer-XL from scratch)
@@ -74,7 +73,9 @@ Credit thanks to Kimi Young, check out his github @ https://github.com/kimiyoung
 ```
 
 ## Acknowledgements
-The Jazz Transformer is trained on the Weimar Jazz Database (**WJazzD**), a dataset meticulously annotated by the **Jazzomat Research Project** (_@ University of Music FRANZ LISZT Weimar_). Many thanks to them for the great work and making it publicly accessible!
+* This is an adaptation of an idea from Yoav Zimmerman. The main use of this project is as a proof of concept for a RNN/LSTM. https://github.com/yoavz/music_rnn
+* Credit thanks to Kimi Young, check out his github @ https://github.com/kimiyoung/transformer-xl
+* The Jazz Transformer is trained on the Weimar Jazz Database (**WJazzD**), a dataset meticulously annotated by the **Jazzomat Research Project** (_@ University of Music FRANZ LISZT Weimar_). Many thanks to them for the great work and making it publicly accessible!
    * URL for **WJazzD**: https://jazzomat.hfm-weimar.de/dbformat/dboverview.html
 
 
